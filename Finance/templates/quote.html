@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body%}
+	<div class="home-header">
+		<a href="/quote">Quote</a> &nbsp; &nbsp;
+		<a href="/buy">Buy</a> &nbsp; &nbsp;
+		<a href="/sell">Sell</a> &nbsp; &nbsp;
+		<a href="/history">History</a>
+		<button style="float: right;"><a href="/logout">Log out</a></button>
+	</div>
+	<br><br>
+	<div class="user">
+		<br><br>
+		<form action="/quote", method="post">
+			<input type="text" placeholder="Insert Symbol", name="stock">
+			<br><br>
+			<button>Quote</button>
+		{% if name != null %}
+			<p> The current price of {{ name }} is {{ price }} </p>
+		{% else %}
+			<p> </p>
+		{% endif %}
+		</form>
+	</div>
+
+
+{% endblock%}

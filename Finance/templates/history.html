@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body%}
+	<div class="home-header">
+		<a href="/quote">Quote</a> &nbsp; &nbsp;
+		<a href="/buy">Buy</a> &nbsp; &nbsp;
+		<a href="/sell">Sell</a> &nbsp; &nbsp;
+		<a href="/history">History</a>
+		<button style="float: right;"><a href="/logout">Log out</a></button>
+	</div>
+	<br><br>
+	<div>
+		<table class="table">
+			<tr>
+				<th>Company Name</th>
+				<th>Stock Symbol</th>
+				<th>Number of Shares</th>
+				<th>Transacted Price</th>
+				<th>Date of Transaction</th>
+			</tr>
+			{% for stock in stocks %}
+			<tr>
+				<td>{{ stock[1] }}</td>
+				<td>{{ stock[2] }}</td>
+				<td>{{ stock[4] }}</td>
+				<td>{{ stock[3] }}</td>
+				<td>{{ stock[5] }}</td> 
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+
+{% endblock%}

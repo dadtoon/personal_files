@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block body%}
+	<br><br>
+	<div class="user">
+		<h2> Log in </h2>
+		<form action="/login", method="post">
+			<label for="">Username</label>
+			<input type="text" name="username">
+			<br><br>
+			<label for="">Password</label>
+			<input type="password" name="password">
+			<br><br>
+			<button>Log in</button>
+		<br><br>
+		{{ warning }}
+		</form>
+		<h5>If not yet registered, <a href="/signup" style="color: blue;" >sign up </a>here!</h5>
+	</div>
+{% endblock%}

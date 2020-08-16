@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+	<title>Finance App - Your personal investment manager</title>
+	    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<div class="header">
+		<a href="/">Finance App</a>
+
+	</div>
+	{% block body%}
+
+	{% endblock %}
+	<div class="footer">
+		<h6>This app is powered by <a href="https://iexcloud.io/">IEX Cloud</a></h6>
+	</div>
+</body>
+</html>

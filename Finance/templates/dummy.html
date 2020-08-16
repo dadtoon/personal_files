@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body%}
+	<div class="home-header">
+		<a href="/quote">Quote</a> &nbsp; &nbsp;
+		<a href="">Buy</a> &nbsp; &nbsp;
+		<a href="">Sell</a> &nbsp; &nbsp;
+		<a href="">History</a>
+		<button style="float: right;"><a href="/logout">Log out</a></button>
+	</div>
+	<ul>
+		{{rows}}
+{% endblock%}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body%}
+	<div class="home-header">
+		<a href="/quote">Quote</a> &nbsp; &nbsp;
+		<a href="/buy">Buy</a> &nbsp; &nbsp;
+		<a href="/sell">Sell</a> &nbsp; &nbsp;
+		<a href="/history">History</a>
+		<button style="float: right;"><a href="/logout">Log out</a></button>
+	</div>
+	<br><br>
+	<div class="user">
+		<br><br>
+		<form action="/sell", method="post">
+			<select name="stocks" placeholder="Select Symbol">
+			{% for stock in stocks %}
+				<option>{{stock[0]}}</option>
+			{%endfor%}
+			</select>
+			<br><br>
+			<input type="text" placeholder="Number of Shares", name="share">
+			<br><br>
+			<button>Sell</button>
+		<br><br>
+		{{ warning }}
+		</form>
+	</div>
+
+
+{% endblock%}
